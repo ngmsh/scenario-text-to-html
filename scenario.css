@@ -1,0 +1,63 @@
+@page {
+  /*size: A4 landscape;*/
+  size: landscape;
+  margin: 0;
+  /*height: 210mm;
+  width: 297mm;*/
+}
+html {
+    font-size: 16px;
+}
+body {
+    /* 縦書き */
+    -webkit-writing-mode: vertical-rl;
+    -ms-writing-mode: tb-rl;
+    writing-mode: vertical-rl;
+    /*height: 49rem;*/
+    height: 210mm;
+    padding: 2rem;
+}
+.wrapper {
+    margin: auto 0 auto 0;
+}
+h1 {
+    margin: 3rem 1rem 0 0;
+}
+h2 {
+    margin-top: 2rem;
+}
+h2:before {
+    content: '○';
+}
+section {
+    height: 190mm;
+    /* 基本余白 */
+    /*padding: 0.5rem;*/
+    padding: 10mm;
+}
+.direction {
+    /* 行あたり文字数指定 */
+    height: 25rem;
+    /* ト書き字下げ 改行対応のためtext-indentを使わない */
+    margin-top: 9rem;
+}
+
+.line + .direction,
+.direction + .line {
+    /* ト書き前後行空け */
+    padding-right: 1rem;
+}
+.line {
+    /* 基本行間 */
+    line-height: 1.8rem;
+    /* 役名と台詞の整列 */
+    display: flex;
+}
+.character {
+    height: 5rem;
+}
+.speech {
+    /* 行あたり文字数指定 */
+    height: 42rem;
+    margin-top: 2rem;
+}

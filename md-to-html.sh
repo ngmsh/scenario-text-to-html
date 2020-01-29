@@ -3,7 +3,7 @@ FILE=$1
 echo '<html>'
 echo '<head>'
 echo '<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>'
-echo '<link rel="stylesheet" type="text/css" href="scenario.css">'
+echo '<link rel="stylesheet" type="text/css" href="css/scenario.css">'
 echo '</head>'
 echo '<body>'
 echo '<div class="wrapper">'

@@ -11,6 +11,7 @@ echo "<h1 class=\"title\">${FILE}</h1>"
 
 sed -E 's;([^ ]+): ?(.+);<div class="line-\1 line"><div class="character-\1 character">\1</div><div class="speech-\1 speech">\2</div></div>;' $FILE |\
 sed -E 's;([^ ]+)「(.+)」;<div class="line-\1 line"><div class="character-\1 character">\1</div><div class="speech-\1 speech">\2</div></div>;' |\
+sed -E 's;([^ ]+)    (.+);<div class="line-\1 line"><div class="character-\1 character">\1</div><div class="speech-\1 speech">\2</div></div>;' |\
 sed -E 's;^    (.+);<div class="direction">\1</div>;' |\
 sed -E 's;^□(.+);</section> \
 <h2 class="scene">\1</h2> \

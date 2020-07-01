@@ -17,7 +17,8 @@ sed -E 's;([^ ]+)「(.+)」;<div class="line-\1 line"><div class="character-\1 c
 sed -E 's;([^ ]+)    (.+);<div class="line-\1 line"><div class="character-\1 character">\1</div><div class="speech-\1 speech">\2</div></div>;' |\
 # 4文字下げしてたらト書き
 sed -E 's;^    (.+);<div class="direction">\1</div>;' |\
-sed -E 's;^□(.+);</section> \
+# 頭に□◯があれば場のあたま
+sed -E 's;^[□◯](.+);</section> \
 <h2 class="scene">\1</h2> \
 <section>;' |\
 # 冒頭の閉じタグは除去
